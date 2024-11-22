@@ -1,0 +1,86 @@
+@import "colors.scss","fonts.scss";
+/* CONCERTS.HTML specifics */
+.tablecontainer {
+    margin-bottom: 3em;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.concerts__table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 1em;
+    border-collapse: collapse;
+}
+
+.concerts__tablerow {
+    display: flex;
+    gap: 0.5em;
+    justify-content: space-between;
+}
+
+.concerts__tableheading {
+    flex: 1;
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.concerts__tabledata {
+    flex: 1;
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.concerts {
+    thead {
+        tr {
+            background-color: $black;
+            border-bottom: 1px solid #dddddd;
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid #dddddd;
+
+            &:nth-of-type(even) {
+                background-color: $black_op_10;
+            }
+
+            &:last-of-type {
+                border-bottom: 2px solid #fff;
+            }
+        }
+    }
+
+    .morebands {
+        display: none;
+    }
+
+    .morebutton {
+        display: block;
+        text-transform: lowercase;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .concerts__table {
+        padding: 1em;
+
+        thead {
+            display: none;
+        }
+
+        .concerts__tablerow {
+            flex-direction: column;
+        }
+    }
+}

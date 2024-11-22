@@ -1,0 +1,65 @@
+@font-face {
+  font-family: MarcellusSC;
+  src: url(../fonts/MarcellusSC-Regular.ttf);
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+  font-style: normal;
+  font-display: swap;
+}
+/* ALBUM RELEASE ADD specifics */
+.release {
+  display: flex;
+  background-image: url("../images/release/evil-reign-release-bg.webp");
+  border: 2px solid #eee;
+  padding: 1%;
+  margin: 2em auto;
+}
+.release .release__heading {
+  font-weight: 400;
+  text-align: left;
+  margin-top: 0;
+}
+.release .release__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0.5em 0 1em;
+}
+.release .release__button {
+  display: block;
+  text-decoration: none;
+  color: #eee;
+  font-size: 80%;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 0.2em 0.5em;
+  background-color: #000;
+  max-width: 100%;
+  border: 1px solid #eee;
+}
+.release .release__photo {
+  border: 1px solid #eee;
+  max-width: 280px;
+}
+
+@media only screen and (max-width: 820px) {
+  .release {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
+  }
+  .release .release__photo {
+    max-width: 100%;
+  }
+  .release .release__heading {
+    text-align: center;
+  }
+  .release .release__content {
+    margin-bottom: 0.5em;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=release.css.map */

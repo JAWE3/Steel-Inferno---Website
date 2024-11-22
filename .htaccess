@@ -1,0 +1,33 @@
+RewriteEngine on
+
+# Redirect to domain without www.
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule .* http://%1%{REQUEST_URI} [R=301,L]
+# Same for HTTPS:
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule .* https://%1%{REQUEST_URI} [R=301,L]
+
+# 301 Redirect URLs.
+Redirect 301 /steelinferno.dk/index.html https://steelinferno.dk
+
+# Stop hotlinking.
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} ^https?://([^/]+)/ [NC]
+RewriteCond %1#%{HTTP_HOST} !^(.+)#\1$
+RewriteRule \.(jpg|webp|png|gif|swf|svg)$ - [NC,F,L]
+
+# Add Caching.
+<FilesMatch ".(ico|jpg|jpeg|png|webp|svg|gif|js|css|swf|json|ttf)$">
+    Header set Cache-Control "max-age=31536000"
+</FilesMatch>
+
+# Custom error pages.
+ErrorDocument 404 /steelinferno.dk/index.html
+
+# Prevent viewing of htaccess file.
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>

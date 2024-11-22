@@ -1,0 +1,16 @@
+@font-face {
+    font-family: MarcellusSC;
+    src: url(../fonts/MarcellusSC-Regular.ttf);
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-style: normal;
+    font-display: swap;
+}
+
+$font-one: "Inter", sans-serif;
+$font-two: "MarcellusSC", serif;

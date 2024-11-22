@@ -1,0 +1,83 @@
+@font-face {
+  font-family: MarcellusSC;
+  src: url(../fonts/MarcellusSC-Regular.ttf);
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+  font-style: normal;
+  font-display: swap;
+}
+/* CONCERTS.HTML specifics */
+.tablecontainer {
+  margin-bottom: 3em;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.concerts__table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+}
+
+.concerts__tablerow {
+  display: flex;
+  gap: 0.5em;
+  justify-content: space-between;
+}
+
+.concerts__tableheading {
+  flex: 1;
+  text-align: left;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.concerts__tabledata {
+  flex: 1;
+  text-align: left;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.concerts thead tr {
+  background-color: #000;
+  border-bottom: 1px solid #dddddd;
+}
+.concerts tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+.concerts tbody tr:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.concerts tbody tr:last-of-type {
+  border-bottom: 2px solid #fff;
+}
+.concerts .morebands {
+  display: none;
+}
+.concerts .morebutton {
+  display: block;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .concerts__table {
+    padding: 1em;
+  }
+  .concerts__table thead {
+    display: none;
+  }
+  .concerts__table .concerts__tablerow {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=concerts.css.map */

@@ -1,0 +1,15 @@
+@import "colors.scss","fonts.scss";
+/* PROMO.HTML specifics */
+.logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2em;
+}
+
+.logos__img {
+    padding: 1em;
+}
+
+.logos__img.lightbg {
+    background-color: $white;
+}

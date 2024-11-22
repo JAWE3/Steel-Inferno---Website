@@ -1,0 +1,18 @@
+@import "colors.scss","fonts.scss";
+/* BIOGRAPHY.HTML specifics */
+.biointro {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.members {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    flex-wrap: wrap;
+}
+
+.member {
+    max-width: 360px;
+}
